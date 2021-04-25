@@ -17,9 +17,9 @@ const reviewRoutes = require("./routes/review");
 const userRoutes = require("./routes/users");
 const mongoSanitize=require('express-mongo-sanitize');
 // const MongoDBStore = require("connect-mongo")(session);
-// const db_url=process.env.DB_URL;
-const dbUrl="mongodb://localhost:27017/yelp"
-mongoose.connect(dbUrl, {
+const db_url=process.env.DB_URL ||mongodb://localhost:27017/yelp ;
+// const dbUrl="mongodb://localhost:27017/yelp"
+mongoose.connect(db_url, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
